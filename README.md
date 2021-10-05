@@ -13,7 +13,9 @@ We aim to numerically investigate flow controlling mechanisms such as fans, whil
 A laminar flow regime will be modelled [6a], along with a turbulent flow regime with an appropriate turbulence model [6b]. A comparison of laminar to turbulent regime will be conducted. The turbulence model will involve investigating and tuning tubulence-related parameters that are flow-dependent [7]. A more quantitative comparison of the turbulence parameters will also be attempted. 
 
 ## Methodology
-The steady-state flow condition will be modelled, via the standard incompressible _simpleFoam_ solver, to significantly reduce computational time, allowing a greater number of scenarios to be simulated. The grid size will be more concentrated nearer the heights of kids (approximately 1.0 metres) to ensure adequate accuracy, in addition to other more standard-practice regions.
+The steady-state flow condition will be modelled, via the OpenFOAM incompressible _simpleFoam_ solver, to significantly reduce computational time, allowing a greater number of scenarios to be simulated. The grid size will be more concentrated nearer the heights of kids (approximately 1.0 metres) to ensure adequate accuracy, in addition to other more standard-practice regions. 
+
+OpenFOAM 9 running on Ubuntu 20.04 LTS [8], via the Windows Subsystem for Linux, is used for all numerical investigations. Note you may need to update Ubuntu's certification package before installing OpenFOAM: `sudo apt install ca-certificates`, then restart Ubuntu from PowerShell: `wsl --shutdown Ubuntu-20.04`.
 
 ## Validation of methodology
 The computational results will be checked against real-world experimental results where available, to ensure accuracy of results and confidence in predictive capacity of the model. Specificially, carbon dioxide concentration levels in the spaces will be measured after releasing a known amount of CO2 within them, taken with fan(s) in place. The real-world results will ideally be obtained multiple times by independent parties.
@@ -39,6 +41,8 @@ Computations will be completed on cloud providers' hardware [9, 10]. Horizontal 
  
 [7] Introduction to turbulence: Reynolds averaged equations: Turbulence closure problem and eddy viscosity:https://www.cfd-online.com/Wiki/Introduction_to_turbulence/Reynolds_averaged_equations
 
-[8] https://www.digitalocean.com/products/droplets/  
+[8] https://openfoam.org/download/9-ubuntu/
 
-[9] https://www.linode.com/products/dedicated-cpu/  
+[9] https://www.digitalocean.com/products/droplets/  
+
+[10] https://www.linode.com/products/dedicated-cpu/  
