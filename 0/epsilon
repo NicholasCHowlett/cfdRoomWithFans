@@ -1,0 +1,55 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  9
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      epsilon;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -3 0 0 0 0];
+
+internalField   uniform 0.23;
+
+boundaryField
+{
+    walls_extruded
+    {
+        type            epsilonWallFunction;
+        value           $internalField;
+    }
+
+    fan_extruded
+    {
+        type            turbulentMixingLengthDissipationRateInlet;
+        mixingLength    0.0168;
+        value           $internalField;
+    }
+
+    window_extruded
+    {
+        type            inletOutlet;
+        inletValue      $internalField;
+    }
+
+    door_extruded
+    {
+        type            inletOutlet;
+        inletValue      $internalField;
+    }
+
+    defaultFaces
+    {
+        type            empty;
+    }
+}
+
+
+// ************************************************************************* //
