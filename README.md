@@ -1,6 +1,8 @@
 # Computational science investigation of airflow in spaces inside newer buildings
 
-*Current development is extending the geometry to include more area outside the doors. This, in addition to changing the boundary condition from an open type directly above the fan to a wall type. Both changes are suspected as causes of non-convergence, as selecting increasingly smaller deltaT values (in addition to conservative relaxation factors) could not ensure numerical stability (a sufficiently small Courant value was not enough to achieve an acceptable level of convergence, in other words).*
+*Current development is focussed on extending the geometry to include more area outside the doors (existing computational domain is shown below). This, in addition to changing the boundary condition from an open type, directly above and adjacent the fan, to a wall type. Both changes are suspected as causes of non-convergence, as selecting increasingly smaller deltaT values (in addition to conservative relaxation factors) could not ensure numerical stability (a sufficiently small Courant value was not enough to achieve an acceptable level of convergence, in other words).*
+
+![Computational domain: bounded by door: mesh_case-01](/mesh_case-01.png)
 
 ## Summary
 This computation fluid dynamics study aims to determine easily-implemented, cheap interventions [1, 2], such as fans, that can possibly significantly reduce COVID-19 airborn transmission, within indoor environments (such as open-plan rooms and smaller workspaces). Fans are a possible alternative intervention for rooms that do not have vents to induce 'air curtains' [3, 4].
