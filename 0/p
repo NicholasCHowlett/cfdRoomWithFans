@@ -16,26 +16,29 @@ FoamFile
 
 dimensions      [0 2 -2 0 0 0 0];
 
-internalField   uniform 0;
+internalField   uniform 1e5;
 
 boundaryField
 {
     window_extruded
     {
-        type            totalPressure;
-        p0              uniform 1e5;
+        type            fixedValue;
+        value           uniform 1e5;
+    }
+
+    fanAbove_extruded
+    {
+        type            zeroGradient;
     }
 
     fan_extruded
     {
-        type            totalPressure;
-        p0              uniform 1e5;
+        type            zeroGradient;
     }
 
     door_extruded
     {
-        type            totalPressure;
-        p0              uniform 1e5;
+        type            zeroGradient;
     }
 
     walls_extruded

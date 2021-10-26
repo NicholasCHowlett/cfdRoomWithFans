@@ -20,29 +20,33 @@ internalField   uniform 8e-2;
 
 boundaryField
 {
-    walls_extruded
+    window_extruded
+    {
+        type            zeroGradient;
+    }
+
+    fanAbove_extruded
+    {
+        type            kqRWallFunction;
+        value           $internalField;      
+    }
+
+    fan_extruded
+    {
+        type            fixedValue;
+        value           $internalField;
+    }
+
+    door_extruded
     {
         type            kqRWallFunction;
         value           $internalField;
     }
 
-    fan_extruded
+    walls_extruded
     {
-        type            turbulentIntensityKineticEnergyInlet;
-        intensity       0.14;
+        type            kqRWallFunction;
         value           $internalField;
-    }
-
-    window_extruded
-    {
-        type            inletOutlet;
-        inletValue      $internalField;
-    }
-
-    door_extruded
-    {
-        type            inletOutlet;
-        inletValue      $internalField;
     }
 
     defaultFaces

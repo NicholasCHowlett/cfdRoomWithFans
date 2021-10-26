@@ -20,7 +20,13 @@ internalField   uniform 0;
 
 boundaryField
 {
-    walls_extruded
+    window_extruded
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+
+    fanAbove_extruded 
     {
         type            nutkWallFunction;
         value           uniform 0;
@@ -34,13 +40,13 @@ boundaryField
 
     door_extruded
     {
-        type            calculated;
+        type            nutkWallFunction;
         value           uniform 0;
     }
 
-    window_extruded
+    walls_extruded
     {
-        type            calculated;
+        type            nutkWallFunction;
         value           uniform 0;
     }
 

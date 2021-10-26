@@ -20,7 +20,12 @@ internalField   uniform (0 0 0);
 
 boundaryField
 {
-    walls_extruded
+    window_extruded
+    {
+        type            zeroGradient;
+    }
+
+    fanAbove_extruded
     {
         type            noSlip;
     }
@@ -33,12 +38,12 @@ boundaryField
 
     door_extruded
     {
-        type            zeroGradient;
+        type            noSlip;
     }
 
-    window_extruded
+    walls_extruded
     {
-        type            zeroGradient;
+        type            noSlip;
     }
 
     defaultFaces

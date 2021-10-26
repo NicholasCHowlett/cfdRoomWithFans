@@ -14,37 +14,43 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-5
+6
 (
     window_extruded
     {
         type            patch;
         nFaces          2;
-        startFace       8696;
+        startFace       14750;
+    }
+    fanAbove_extruded
+    {
+        type            wall;
+        nFaces          7;
+        startFace       14752;
     }
     fan_extruded
     {
         type            patch;
-        nFaces          1;
-        startFace       8698;
+        nFaces          9;
+        startFace       14759;
     }
     door_extruded
     {
-        type            patch;
+        type            wall;
         nFaces          24;
-        startFace       8699;
+        startFace       14768;
     }
     walls_extruded
     {
         type            wall;
         nFaces          224;
-        startFace       8723;
+        startFace       14792;
     }
     defaultFaces
     {
         type            empty;
-        nFaces          11762;
-        startFace       8947;
+        nFaces          19844;
+        startFace       15016;
     }
 )
 

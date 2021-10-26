@@ -20,29 +20,33 @@ internalField   uniform 0.23;
 
 boundaryField
 {
-    walls_extruded
+    window_extruded
+    {
+        type            zeroGradient;
+    }
+
+    fanAbove_extruded
+    {
+        type            epsilonWallFunction;
+        value           $internalField;        
+    }
+
+    fan_extruded
+    {
+        type            fixedValue;
+        value           uniform 0.23;
+    }
+
+    door_extruded
     {
         type            epsilonWallFunction;
         value           $internalField;
     }
 
-    fan_extruded
+    walls_extruded
     {
-        type            turbulentMixingLengthDissipationRateInlet;
-        mixingLength    0.0168;
+        type            epsilonWallFunction;
         value           $internalField;
-    }
-
-    window_extruded
-    {
-        type            inletOutlet;
-        inletValue      $internalField;
-    }
-
-    door_extruded
-    {
-        type            inletOutlet;
-        inletValue      $internalField;
     }
 
     defaultFaces

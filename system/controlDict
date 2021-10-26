@@ -24,11 +24,11 @@ stopAt          endTime;
 
 endTime         2000;
 
-deltaT          0.001;
+deltaT          0.0001;
 
 writeControl    timeStep;
 
-writeInterval   1;
+writeInterval   2000;
 
 purgeWrite      0;
 
@@ -46,7 +46,8 @@ runTimeModifiable true;
 
 functions
 {
-    #includeFunc residuals(p, U)
+    //#includeFunc residuals(p, U)
+    #includeFunc residuals
 }
 
 // ************************************************************************* //
