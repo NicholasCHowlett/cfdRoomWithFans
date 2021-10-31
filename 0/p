@@ -26,22 +26,27 @@ boundaryField
         value           uniform 1e5;
     }
 
-    fanAbove_extruded
-    {
-        type            zeroGradient;
-    }
-
-    fan_extruded
-    {
-        type            zeroGradient;
-    }
-
-    door_extruded
-    {
-        type            zeroGradient;
-    }
-
     walls_extruded
+    {
+        type            zeroGradient;
+    }
+
+    fanOutlet_extruded
+    {
+        type            zeroGradient;
+    }
+
+    fanInlet_extruded
+    {
+        type            zeroGradient;
+    }
+
+    fanSides_extruded
+    {
+        type            zeroGradient;
+    }
+
+    outside_extruded
     {
         type            zeroGradient;
     }

@@ -25,23 +25,28 @@ boundaryField
         type            zeroGradient;
     }
 
-    fanAbove_extruded
+    walls_extruded
     {
         type            noSlip;
     }
 
-    fan_extruded
+    fanOutlet_extruded
     {
         type            fixedValue;
-        value           uniform (2.43 -2.43 0);
+        value           uniform (3.23 -1.17 0);
     }
 
-    door_extruded
+    fanInlet_extruded
     {
         type            noSlip;
     }
 
-    walls_extruded
+    fanSides_extruded
+    {
+        type            noSlip;
+    }
+
+    outside_extruded
     {
         type            noSlip;
     }

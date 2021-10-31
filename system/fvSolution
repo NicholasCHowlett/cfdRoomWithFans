@@ -55,12 +55,12 @@ relaxationFactors
 {
     fields
     {
-        p               0.25;
+        p               0.1;
     }
 
     equations
     {
-        U               0.7;
+        U               0.1;
         k               0.7;
         epsilon         0.7;
         age             1;
