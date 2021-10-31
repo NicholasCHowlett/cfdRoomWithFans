@@ -2,7 +2,7 @@
 
 Two-dimensional computational fluid dynamics simulation results showing airflow patterns within a room, airflow which is driven by an axial fan that is designed with noise reduction, are shown below. These investigations complement other COVID-focussed numerical studies of indoor environments [1], and readers are directed to this article as an example of an accessible computational fluid dynamics methodology. This study simulates a non-probable (likely non-physical) laminar flow regime.
 
-![Computational domain: bounded by verrandah: results: airflow patterns: velocity streamlines](/streamlines.PNG)
+![Computational domain: bounded by verrandah: results: airflow patterns: velocity streamlines](/streamlines.png)
 
 Overall, due to forcing created by the fan, the fluid develops numerous recirculation regions, where fluid within each region circulates numerous times around a fixed point, of which both larger regions extend most of the vertical distance to the floor. Conversely, the air extrained above the fan (external to the large, left recirculation region) tends to exit thru the window or door. 
 
